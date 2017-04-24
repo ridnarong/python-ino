@@ -5,7 +5,7 @@ import re
 web_response = requests.get('http://www.kseries.co/rebel-hong-gil-dong/')
 text_result = web_response.text
 # แก้ไข regular expression โดย ศึกษาจาก http://rubular.com/ ว่าจะเอาลิงก์มาได้ยังไง
-matches = re.search('iframe.*src=[\'|\"](\S+)[\'|\"]', text_result)
+matches = re.findall('http:\/\/www.kseries.co\/clip\/(\d+)\/\"\starget=\"_blank\">(\S+)<\/a>', text_result)
 
-for match in matches.groups():
+for match in matches:
   print("- %s" % (match,))
