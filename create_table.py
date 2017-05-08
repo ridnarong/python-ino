@@ -18,22 +18,25 @@ for item in c.execute('SELECT * FROM links'):
 
 # Table Design
 # *Series*
-# field       | datatype
-# -----------------------
-# title       | text
-# description | text
-# url         | text
+# field       | datatype  | Null  | Default
+# -------------------------------------------
+# title       | text      | No    | 
+# description | text      | No    | 
+# url         | text      | No    | 
 
 # *Links*
-# field     | datatype
-# ------------------
-# id        | int
-# ep        | text
-# link      | text
-# status    | text
-# is_backup | boolean
+# field     | datatype  | Null  | Default
+# --------------------------------------------
+# id        | int       | No    |
+# ep        | text      | No    |
+# link      | text      | No    |    
+# status    | text      | Yes   |  'New'
+# is_backup | boolean   | Yes   |  false
 
 # *Resolution*
-# field       | datatype
-# -----------------------
-# resolution  | int
+# field       | datatype  | Null  | Default
+# --------------------------------------------
+# resolution  | int       | No    |
+
+# ตัวอย่าง การสร้าง Table
+# https://www.w3schools.com/sql/sql_default.asp
