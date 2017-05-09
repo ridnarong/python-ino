@@ -20,6 +20,7 @@ for item in c.execute('SELECT * FROM links'):
 # *Series*
 # field       | datatype  | Null  | Default
 # -------------------------------------------
+# id          | int       | No    |
 # title       | text      | No    | 
 # description | text      | No    | 
 # url         | text      | No    | 
